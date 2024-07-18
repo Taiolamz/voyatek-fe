@@ -1,11 +1,18 @@
-import { DashboardLayout } from "@/components/DashboardLayout";
-import Image from "next/image";
+"use client";
+
+import UserAndRoles from "./dashboard/users-and-roles/page";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("/dashboard/users-and-roles");
+  }, []);
   return (
     <div>
-      {/* <p className="text-[red]">Hello world</p> */}
-      {/* <DashboardLayout /> */}
+      {/* <UserAndRoles /> */}
       <></>
     </div>
   );
